@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!--viewport 视图-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买</title>
+    <!-- bootstrap css文件 -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <!--默认的  less.js是通过ajax解析，所以需要加 / less 然后通过服务器打开 -->
+    <!--<link rel="stylesheet/less" href="css/base.less">-->
+    <!--公共的样式-->
+    <!--<link rel="stylesheet/less" href="css/common.less">-->
+    <link rel="stylesheet/less" href="css/discount_point.less">
+    <!--less 本地编译-->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+
+
+    <!--公共分页的头部-->
+    <!--头部-->
+    <header class=" header paging_header">
+
+        <!--点击返回上一级-->
+        <div class="back">
+            <a href="inlanddiscount.html" class="glyphicon glyphicon-menu-left "></a>
+        </div>
+        <!--中间部分-->
+        <h1>国内折扣</h1>
+        <!--手机app下载-->
+        <div class='appdown'>
+            <a href="#">
+                <img src="images/header_app.png" alt="手机app下载">
+            </a>
+        </div>
+    </header>
+
+
+
+    <main class="m-main">
+
+        <div class="point-box" id="point_box">
+           
+
+        </div>
+
+        <div class="siteC">
+            <ul>
+                <li>
+                    <a href="index.html">首页 >&nbsp;</a>
+                </li>
+                <li>
+                    <a href="moneyctrl.html"> 超值推荐 >&nbsp;</a>
+                </li>
+                <li id="product-title" class="tit one-txt-cut">
+                       
+                </li>
+            </ul>
+        </div>
+
+    </main>
+
+
+    <script type="text/template" id="pro-point-template">
+        {{if result}}
+            {{each result as k}}
+                   <div class="tit">
+                <h3>{{k.productName}}</h3>
+            </div>
+            <div class="price">
+                <p>{{k.productPrice}}</p>
+            </div>
+            <div class="info">
+                <span>{{k.productFrom}}</span>
+                <span>{{k.productTime}}</span>
+                <span>{{k.productTips}}</span>
+            </div>
+
+            <div class="point">
+                <div class="min-img">
+                    <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?width=600&imgurl=j_sources/img/2016/10/24/190_190_0_36618798b6e1a98d9f4ae8f7a195f41b.jpg"
+                        alt="">
+                </div>
+                <div class="content">
+                    <p>{{k.productInfo}}</p>
+                </div>
+                <div class="introduce">
+                  {{=k.productImg}}
+                </div>
+            </div>
+
+            <div class="goshopping">
+                <a href="#">前往购买</a>
+            </div>
+
+            <div class="comment-box">
+                <div class="tit"> 发表评论</div>
+                <div class="reply">
+                    <div class="form"> <textarea name="ctl00$ContentBody$txt_nr" id="ctl00_ContentBody_txt_nr" rows="3"></textarea> <input name="ctl00$ContentBody$lbl_fbr"
+                            id="ctl00_ContentBody_lbl_fbr" value="手机端网友58***74" type="hidden"> <input name="ctl00$ContentBody$hid_name"
+                            id="ctl00_ContentBody_hid_name" value="Apple iPhone 6 64GB 金色 移动联通电信4G手机" type="hidden">
+                        <div class="ctrl">
+                        <input name="ctl00$ContentBody$Button1" value="发表评论" id="ctl00_ContentBody_Button1" class="tjdp"
+                                type="submit"> </div>
+                    </div>
+                </div>
+                <div class="tit" id="newcomment"> 最新评论</div>
+                <div class="list">
+                    <ul> </ul>
+                </div>
+            </div>
+            {{/each}}
+        {{/if}}
+
+
+
+    </script>
+
+
+
+
+
+    <!-- APP下载 -->
+    <div id="appdown-img" style="position:fixed;right:0;bottom:30px;z-index:999">
+        <a href="http://m.manmanbuy.com/?o=download">
+            <img src="images/TB2WepTeb1J.eBjSszcXXbFzVXa_!!379516416.png" width="60">
+        </a>
+    </div>
+
+
+    <!--打开app-->
+    <div class="appbanner clearfix">
+        <div class="applogo">
+            <img src="http://m.manmanbuy.com/download/images/logo.png" alt="">
+        </div>
+        <div class="ban-info">
+            <p class="tit">慢慢买APP</p>
+            <p>给喜欢网购的同学推荐下[慢慢买]这个APP，第一时间更新国内外的优惠信息！</p>
+        </div>
+        <div class="open-app">
+            <a href="http://m.manmanbuy.com/?o=download" class='btn-open'>立即打开</a>
+        </div>
+    </div>
+
+
+
+    <!--底部区域-->
+    <footer class="footer">
+        <div class="userEntry_box">
+            <ul>
+                <li><a href="login.html">登录</a></li>
+                <li><a href="userRegister.html">注册</a></li>
+                <li>
+                    <a href="#"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a>
+                </li>
+            </ul>
+        </div>
+        <div class="info">
+            <p>
+                <a href="#">手机APP下载</a><a href="#">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+
+    <!--jquery js文件-->
+    <script src="lib/jquery/jquery-2.2.2.js"></script>
+    <!-- bootstrap js文件-->
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <!--模板引擎-->
+    <script src="lib/js/template.js"></script>
+
+    <script src="js/common.js"></script>
+
+    <script src="js/discount_point.js"></script>
+
+</body>
+
+</html>

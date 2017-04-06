@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<!--viewport 视图-->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>慢慢买</title>
+	<!-- bootstrap css文件 -->
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+	<!--默认的  less.js是通过ajax解析，所以需要加 / less 然后通过服务器打开 -->
+	<!--<link rel="stylesheet/less" href="css/base.less">-->
+	<!--公共的样式-->
+	<!--<link rel="stylesheet/less" href="css/common.less">-->
+    <link rel="stylesheet/less" href="css/coupon.less">
+	<!--less 本地编译-->
+	<script src="lib/less/less.js"></script>
+</head>
+
+<body>
+
+		<!--公共分页的头部-->
+		 <!--头部-->
+        <header class=" header paging_header bgcPink">     
+            <!--点击返回上一级-->
+             <div class="back">
+                    <a href="index.html" class="glyphicon glyphicon-menu-left "></a>
+            </div>
+            <!--中间部分-->
+             <h1>优惠券</h1>
+            <!--手机app下载-->
+            <div class='appdown'>
+                <a href="#">
+                    <img src="images/header_app.png" alt="手机app下载">
+                </a>
+	        </div>
+        </header>
+
+    <main class="m-main">
+        <div class="coupon-box" id="coupon_box">
+            
+        </div>
+
+         <div class="siteC">
+            <ul>
+                <li>
+                    <a href="index.html">首页 >&nbsp;</a>
+                </li>
+                <li>
+                    <a href="moneyctrl.html"> 优惠券&nbsp;</a>
+                </li>
+            </ul>
+        </div>
+
+    </main>
+
+    <script type="text/html" id="coupon-template">
+        {{if result}}
+         <ul class="clearfix">
+             {{each result as k}}
+                    <li>
+                        <a href= {{k.couponLink}}?couponid={{k.couponId}}>
+                            <img src="{{k.couponImg}}" alt="">
+                            <p>{{k.couponTitle}}</p>
+                        </a>
+                    </li>
+
+            {{/each}}
+               </ul>
+        {{/if}}
+    </script>
+
+    
+	  <!--底部区域-->
+    <footer class="footer">
+        <div class="userEntry_box">
+            <ul>
+                <li><a href="login.html">登录</a></li>
+                <li><a href="userRegister.html">注册</a></li>
+                <li><a href="#"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a></li>
+            </ul>
+        </div>
+        <div class="info">
+            <p>
+                <a href="#">手机APP下载</a><a href="#">慢慢买手机版</a>
+                -- 掌上比价平台
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+	<!--jquery js文件-->
+	<script src="lib/jquery/jquery-2.2.2.js"></script>
+	<!-- bootstrap js文件-->
+	<script src="lib/bootstrap/js/bootstrap.js"></script>
+	<!--模板引擎-->
+	<script src="lib/js/template.js"></script>
+
+    <script src="js/coupon.js"></script>
+</body>
+
+</html>

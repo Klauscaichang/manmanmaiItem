@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<!--viewport 视图-->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>慢慢买</title>
+	<!-- bootstrap css文件 -->
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+	<!--默认的  less.js是通过ajax解析，所以需要加 / less 然后通过服务器打开 -->
+	<!--<link rel="stylesheet/less" href="css/base.less">-->
+	<!--公共的样式-->
+	<!--<link rel="stylesheet/less" href="css/common.less">-->
+    <link rel="stylesheet/less" href="css/userRegister.less">
+	<!--less 本地编译-->
+	<script src="lib/less/less.js"></script>
+</head>
+
+<body>
+	<!--头部logo区域-->
+	<header class="header navbar-fixed-top">
+		<div class="logo">
+			<a href="index.html">
+				<img src="images/header_logo.png" alt="logo">
+			</a>
+		</div>
+		<div class='appdown'>
+			<a href="#">
+				<img src="images/header_app.png" alt="手机app下载">
+			</a>
+		</div>
+	</header>
+	<!--搜索区域-->
+	<div class="seach_box ">
+		<form class="navbar-form clearfix" role="search">
+			<div class="form-group seach_txt">
+				<input type="text" placeholder="请输入你想比价的商品">
+			</div>
+			<button type="submit" class="btn btn-default seach_btn">搜索</button>
+		</form>
+	</div>
+
+
+  <!--用户注册-->
+    <main class="login_box">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <div class="col-sm-10">
+                <input type="email" alt="用户名" class="form-control" placeholder="请输入用户名（3-11个字符）" pattern="" id="userName" >
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-10">
+                <input type="password" alt='密码' class="form-control" placeholder="密码（6-20个字符）" id="userPassword">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-10">
+                <input type="tel" alt='手机号' class="form-control" placeholder="请输入手机号" id="userPhone" >
+                </div>
+            </div>
+
+            <div class="receive_box">
+					<img src="images/index/Number.bmp" alt="验证码" title="点击更换验证码">
+                	<input type="tel" class="inPhone" alt="输入验证码" id="userReceive">
+					<input type="button" class="receive_btn" value="获取手机验证码" id="btn_getReceive">
+            </div>       
+
+            <div class="form-group">
+                <div class="col-sm-10">
+                <input type="number" class="form-control" placeholder="请输入手机验证码" id="userPhoneR">
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-sm-10">
+                <input type="email" alt='邮箱' class="form-control" placeholder="请输入邮箱" id="userEmail">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-10">
+                <button type="submit" class="btn btn-default login_btn" disabled >注册</button>
+                </div>
+            </div>
+
+        </form>
+    </main>
+
+
+	<!--底部区域-->
+	<footer class="footer">
+		<div class="userEntry_box">
+			<ul>
+				<li><a href="login.html">登录</a></li>
+				<li><a href="userRegister.html">注册</a></li>
+				<li><a href="#"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a></li>
+			</ul>
+		</div>
+		<div class="info">
+			<p>
+				<a href="#">手机APP下载</a><a href="#">慢慢买手机版</a>
+				 -- 掌上比价平台
+			</p>
+			<p>m.manmanbuy.com</p>
+		</div>
+	</footer>
+
+	<!--app-open链接-->
+    <div class=" navbar-fixed-bottom app-open">
+        <a href="javascript:;" class="pull-left closefix" id="closefix"></a>
+        <div class="pull-left app-icon"></div>
+        <p>慢慢买</p>
+        <p>全网比价,查历史价格</p>
+        <a href="http://m.manmanbuy.com/?o=download" title="打开app" class="download-btn">立即打开</a>
+    </div>
+
+
+	<!--jquery js文件-->
+	<script src="lib/jquery/jquery-2.2.2.js"></script>
+	<!-- bootstrap js文件-->
+	<script src="lib/bootstrap/js/bootstrap.js"></script>
+	<!--模板引擎-->
+	<script src="lib/js/template.js"></script>
+	<!--打开app-->
+	<script src="js/common.js"></script>
+	<!--注册表单-->
+	<script src="js/userRegister.js"></script>
+</body>
+
+</html>

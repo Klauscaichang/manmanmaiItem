@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!--viewport 视图-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买</title>
+    <!-- bootstrap css文件 -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <!--默认的  less.js是通过ajax解析，所以需要加 / less 然后通过服务器打开 -->
+    <!--<link rel="stylesheet/less" href="css/base.less">-->
+    <!--公共的样式-->
+    <!--<link rel="stylesheet/less" href="css/common.less">-->
+    <link rel="stylesheet/less" href="css/couponproduct.less">
+    <!--less 本地编译-->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+
+    <!--公共分页的头部-->
+    <!--头部-->
+    <header class=" header paging_header bgcPink">
+        <!--点击返回上一级-->
+        <div class="back">
+            <a href="coupon.html" class="glyphicon glyphicon-menu-left "></a>
+        </div>
+        <!--中间部分-->
+        <h1>肯德基优惠券</h1>
+        <!--手机app下载-->
+        <div class='appdown'>
+            <a href="#">
+                <img src="images/header_app.png" alt="手机app下载">
+            </a>
+        </div>
+    </header>
+
+
+
+    <main class="m-main">
+        <div class="point-box">
+            <p>--点餐前出示手机中的优惠券，即可享受优惠--</p>
+        </div>
+        <div class="coupon-list">
+            <ul id="cou-list-box">
+            
+            </ul>
+        </div>
+    </main>
+    
+    <script type="text/html" id="cou-list-template">
+        {{if result}}
+            {{each result as k}}
+                <li>
+                    <a href="#" class="clearfix">
+                        <div class="img-pic">{{=k.couponProductImg}}</div>
+                        <div class='info'>
+                            <h3 class="tit txt-cut">{{k.couponProductName}}</h3>
+                            <p class="price">{{k.couponProductPrice}}</p>
+                            <p class="time">{{k.couponProductTime}}</p>
+                        </div>
+                    </a>
+                </li>
+            {{/each}}
+        {{/if}}
+    </script>
+
+    <div class='banner-bgc'>
+         <div class="ban-box">
+             <div class="img-pic clearfix" id="img-box">
+                 <ul id="img-list">
+                     <li><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc27.jpg" alt=""></li>
+                     <li><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc27.jpg" alt=""></li>
+                     <li><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc27.jpg" alt=""></li>
+                     <li><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc27.jpg" alt=""></li>
+                     <li><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc27.jpg" alt=""></li>
+                     <li><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc27.jpg" alt=""></li>
+                     <li><img src="http://d3.5ikfc.com/static/thumbs/1016/kfc-5ikfc-108_pc27.jpg" alt=""></li>
+                 </ul>
+             </div>
+             <!--<div class="btn">-->
+                 <!--<a href="#" class="last" id="last" > ＜ </a>-->
+                 <!--<a href="#" class="next" id='next' > ＞ </a>-->
+             <!--</div>-->
+        </div>
+    </div>
+
+    <script type="text/html" id="banner-template">
+    
+    </script>
+
+
+    <!--底部区域-->
+    <footer class="footer">
+        <div class="userEntry_box">
+            <ul>
+                <li><a href="login.html">登录</a></li>
+                <li><a href="userRegister.html">注册</a></li>
+                <li>
+                    <a href="#"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a>
+                </li>
+            </ul>
+        </div>
+        <div class="info">
+            <p>
+                <a href="#">手机APP下载</a><a href="#">慢慢买手机版</a> -- 掌上比价平台
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+
+    <!--jquery js文件-->
+    <script src="lib/jquery/jquery-2.2.2.js"></script>
+    <!-- bootstrap js文件-->
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <!--模板引擎-->
+    <script src="lib/js/template.js"></script>
+
+    <script src="js/couponproduct.js"></script>
+</body>
+
+</html>

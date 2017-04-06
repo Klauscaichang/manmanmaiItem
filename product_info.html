@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<!--viewport 视图-->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>慢慢买</title>
+	<!-- bootstrap css文件 -->
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+	<!--默认的  less.js是通过ajax解析，所以需要加 / less 然后通过服务器打开 -->
+	<!--<link rel="stylesheet/less" href="css/base.less">-->
+	<!--公共的样式-->
+	<!--<link rel="stylesheet/less" href="css/common.less">-->
+	<!--less 本地编译-->
+    <link rel="stylesheet/less" href="css/product_info.less">
+
+	<script src="lib/less/less.js"></script>
+
+</head>
+
+<body>
+
+	<div class="appbanner clearfix">
+		<div class="applogo"><img src="http://m.manmanbuy.com/download/images/logo.png" alt=""></div>
+		<div class="ban-info">
+			<p class="tit">慢慢买比价客户端</p>
+			<p>掌控价格不再买贵</p>
+			<p>500万人正在使用</p>
+		</div>
+		<div class="open-app">
+			<a href="javascript:;" class="btn-box" id="btn-close-app"> X </a>
+			<a href="http://m.manmanbuy.com/?o=download"  class="btn-open">立即打开</a>
+		</div>
+	</div>
+
+
+	<!--头部logo区域-->
+	<header class="header navbar-fixed-top">
+		<div class="logo">
+			<a href="index.html">
+				<img src="images/header_logo.png" alt="logo">
+			</a>
+		</div>
+		<div class='appdown'>
+			<a href="#">
+				<img src="images/header_app.png" alt="手机app下载">
+			</a>
+		</div>
+	</header>
+	<!--搜索区域-->
+	<div class="seach_box ">
+		<form class="navbar-form clearfix" role="search">
+			<div class="form-group seach_txt">
+				<input type="text" placeholder="请输入你想比价的商品">
+			</div>
+			<button type="submit" class="btn btn-default seach_btn">搜索</button>
+		</form>
+	</div>
+
+    <main class="prolist-box">
+        <div class="siteC">
+            <ul>
+                <li> 
+                    <a href="index.html">首页 >&nbsp;</a> 
+                </li>
+                <li id="product-title">
+					
+                </li>
+				<li id="product-info" >
+                   
+                </li>
+            </ul>
+            <div>
+                <a href="#"> 筛选 </a>
+            </div>
+        </div>
+
+		<div class="product_info">
+			<div class="product-name">海信(Hisense) LED55EC520UA  55英寸 超高清4K 智能网络LED液晶电视</div>
+			<div class="product-pic"><img src="http://pro.zuyushop.com:8015/ProPic/20158/Thumb/Thumb_2015080010223719207.jpg" alt=""></div>
+			<div class="product-collect">
+				<a href="#"><img src="http://www.zuyushop.com/wap/images/sc.jpg" alt="收藏"></a>
+			</div>
+		</div>
+		<div class="product-tab">
+			<ul class="clearfix">
+				<li class="cur"><a href="#">比价购买</a></li>
+				<li class="mtab"><a href="#">产品参数</a></li>
+				<li><a href="#">评价(2322)</a></li>
+			</ul>
+			
+		</div>
+
+
+		<div class="plist">
+			<table width="100%"> <tbody><tr> <td rowspan="2" class="p_pic" valign="top"> <a href="redirect.aspx?webid=1&amp;bjid=76069915&amp;tourl=http://item.jd.com/1162187.html&amp;y=bijia" target="_blank" onclick="trackLog('商品购买','比价页面');"> <img src="http://sf.manmanbuy.com/images/sitelogo/1.png"></a> </td> <td> <a href="redirect.aspx?webid=1&amp;bjid=76069915&amp;tourl=http://item.jd.com/1162187.html&amp;y=bijia" target="_blank" onclick="trackLog('商品购买','比价页面');">京东商城</a> </td> <td class="red"> ￥1999.00 </td> <td align="center" width="60"> <span style="display: inline-block;width: 56px;height: 24px;border-radius: 6px;text-align: center;line-height: 24px;background-color: #ff5500;color: #fff;font-size: 14px;">去购买</span> </td> </tr> <tr class="tab2"> <td> </td> <td class="r"> </td> <td></td> </tr> </tbody></table>
+		</div>
+		<p class="product-point">
+                * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+        </p>
+
+		<!--评论区域-->
+		<div class="product-com-box">
+			<div class="product-com-title">
+				<p>网友评价</p>
+			</div>
+			<div class="product-com-point">
+				<!--用户评论-->
+				<ul id="com-point-box">
+		
+				</ul>
+			</div>
+
+		</div>
+
+		<div class="com-more">
+			<a href="#">查看更多评价</a>
+		</div>
+
+    </main>
+
+	<div class="appbanner clearfix">
+		<div class="applogo"><img src="http://m.manmanbuy.com/download/images/logo.png" alt=""></div>
+		<div class="ban-info">
+			<p class="tit">慢慢买APP</p>
+			<p>给喜欢网购的同学推荐下[慢慢买]这个APP，第一时间更新国内外的优惠信息！</p>
+		</div>
+		<div class="open-app">
+			<a href="http://m.manmanbuy.com/?o=download" class='btn-open'>立即打开</a>
+		</div>
+	</div>
+
+
+
+	<script type="text/html" id="product-com-template">
+		{{if result}}
+			{{each result as k}}
+				<li class="clearfix">
+					<p>
+						<span class="pull-left">{{k.comName}}</span>
+						<span class="pull-right">{{k.comTime}}</span>
+					</p>
+					<p>
+						<span class="pull-left star5">
+							<img src="images/star.svg" alt="">
+							<img src="images/star.svg" alt="">
+							<img src="images/star.svg" alt="">
+							<img src="images/star.svg" alt="">
+							<img src="images/star.svg" alt="">
+						</span>
+						<span class="pull-right">{{k.comFrom}}</span>
+					</p>
+					<span class="pull-left com-user">{{k.comContent}}</span>
+					<a href="#" class="pull-left" data-comId = {{k.comId}} >回复</a>
+				</li>
+			{{/each}}
+		{{/if}}
+
+	</script>
+
+
+
+	  <!--底部区域-->
+    <footer class="footer">
+        <div class="userEntry_box">
+            <ul>
+                <li><a href="login.html">登录</a></li>
+                <li><a href="userRegister.html">注册</a></li>
+                <li><a href="#"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a></li>
+            </ul>
+        </div>
+        <div class="info">
+            <p>
+                <a href="#">手机APP下载</a><a href="#">慢慢买手机版</a>
+                -- 掌上比价平台
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+	<!--app-open链接-->
+    <div class=" navbar-fixed-bottom app-open">
+        <a href="javascript:;" class="pull-left closefix" id="closefix"></a>
+        <div class="pull-left app-icon"></div>
+        <p>慢慢买</p>
+        <p>全网比价,查历史价格</p>
+        <a href="http://m.manmanbuy.com/?o=download" title="打开app" class="download-btn">立即打开</a>
+    </div>
+
+
+
+	<!--jquery js文件-->
+	<script src="lib/jquery/jquery-2.2.2.js"></script>
+	<!-- bootstrap js文件-->
+	<script src="lib/bootstrap/js/bootstrap.js"></script>
+	<!--模板引擎-->
+	<script src="lib/js/template.js"></script>
+
+	<script src="js/common.js"></script>
+
+    <script src="js/product_info.js"></script>
+
+</body>
+
+</html>

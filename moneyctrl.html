@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<!--viewport 视图-->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>慢慢买</title>
+	<!-- bootstrap css文件 -->
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+	<!--默认的  less.js是通过ajax解析，所以需要加 / less 然后通过服务器打开 -->
+	<!--<link rel="stylesheet/less" href="css/base.less">-->
+	<!--公共的样式-->
+	<!--<link rel="stylesheet/less" href="css/common.less">-->
+    <link rel="stylesheet/less" href="css/money.less">
+	<!--less 本地编译-->
+	<script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <!--公共分页的头部-->
+     <!--头部-->
+    <header class=" header paging_header">                    
+        <!--点击返回上一级-->
+            <div class="back">
+                <a href="index.html" class="glyphicon glyphicon-menu-left "></a>
+        </div>
+        <!--中间部分-->
+            <h1>省钱控 - 最新优惠</h1>
+        <!--手机app下载-->
+        <div class='appdown'>
+            <a href="#">
+                <img src="images/header_app.png" alt="手机app下载">
+            </a>
+        </div>
+    </header>
+    
+    <main class="m-main">
+        <div class="money-list">
+            <ul class="list-box" id="list_box">
+               
+            </ul>
+        </div>
+
+        <div class="select-page">
+            <div class="pull-left"><input type="button" value="上一页" id="s-last" onclick='javascript:;'></div>
+            <div class="pull-right"><input type="button" value="下一页" id="s-next" onclick='javascript:;'></div>
+            <div class="select-list">
+                <select name="#" id="select-box">
+                </select>
+            </div>
+        </div>
+
+        <div class="siteC">
+            <ul>
+                <li> 
+                    <a href="index.html">首页 >&nbsp;</a> 
+                </li>
+                <li>
+					<a href="#">省钱控 </a> 
+                </li>
+            </ul>
+        </div>
+
+    </main>
+
+
+    <script type="text/template" id="list_template">
+            {{if result}}
+                {{each result as k}}
+                <li>
+                    <a href="discount_point.html?productid={{k.productId-20}}" class='clearfix' >
+                        {{#k.productImgSm}}
+                        <div class="info ">
+                            <p class="title">{{k.productName}}<span>&nbsp; {{k.productPinkage}}</span></p>
+                            <p class="other clearfix">
+                                    <span class="mall"> {{k.productForm}} | {{k.productTime}} </span>
+                                    <span class="comment"> 
+                                            <i class="comment-icon"></i>
+                                    {{ getNumber(k.productComCount) }}</span>
+                            </p>     
+                        </div>
+                     </a>
+                </li>
+                {{/each}}
+            {{/if}}
+
+    </script>
+
+
+	  <!--底部区域-->
+    <footer class="footer">
+        <div class="userEntry_box">
+            <ul>
+                <li><a href="login.html">登录</a></li>
+                <li><a href="userRegister.html">注册</a></li>
+                <li><a href="#"><img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部</a></li>
+            </ul>
+        </div>
+        <div class="info">
+            <p>
+                <a href="#">手机APP下载</a><a href="#">慢慢买手机版</a>
+                -- 掌上比价平台
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+    <!-- APP下载 -->
+    <div id="appdown-img" style="position:fixed;right:0;bottom:30px;z-index:999">
+        <a href="http://m.manmanbuy.com/?o=download">
+            <img src="images/TB2WepTeb1J.eBjSszcXXbFzVXa_!!379516416.png" width="60">
+        </a>
+    </div>
+
+
+	<!--jquery js文件-->
+	<script src="lib/jquery/jquery-2.2.2.js"></script>
+	<!-- bootstrap js文件-->
+	<script src="lib/bootstrap/js/bootstrap.js"></script>
+	<!--模板引擎-->
+	<script src="lib/js/template.js"></script>
+
+    <script src="js/common.js"></script>
+
+    <script src="js/money.js"></script>
+
+</body>
+
+</html>
