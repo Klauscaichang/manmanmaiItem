@@ -1,0 +1,177 @@
+@import url(common.less);
+
+
+.footer{
+    padding-top: 20px;
+}
+
+.prolist-box{
+
+    .siteC{
+        height: 40px;
+        line-height: 40px;
+        background-color: @bgcColor;
+        padding-left: 5px;
+        border-top: 1px solid #ebebeb;
+        border-bottom: 1px solid #ccc;
+        background: linear-gradient(#ffffff,#ebebeb );
+        ul,li{
+            float: left;
+            margin: 0;
+        }
+        div{
+            float:right;
+            margin-right: 8px;
+            margin-top: 4px;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 16px;
+            box-shadow: 1px 2px #888;
+            border-bottom: 1px solid #bababa;
+            background-color: #d0d0d0;
+            background: linear-gradient(#d7d7d7,#f5f5f5);
+            border-radius: 4px;
+        }
+    }
+
+    .product_info{
+        position: relative;
+        .product-name{
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 16px;
+            font-size: 17px;
+            text-align: center;
+        }
+        .product-pic{
+            width: 170px;
+            height: 170px;
+            display: block;
+            margin: 0 auto;
+        }
+        .product-collect{
+            position: absolute;
+            right: 20px;
+            bottom: 10px;
+            a{
+                display: block;
+                img{
+                    width: 39px;
+                    height: 39px;
+                }
+            }
+        }
+    }
+
+    .product-tab{
+        ul{
+            border-top: solid 1px #c14d00;
+            border-bottom: solid 1px #c14d00;
+            margin: 0;
+        }
+        li{
+            float: left;
+            text-align: center;
+            width: 33.3333%;                    
+            background-color: #ffbb00;
+            a{
+                color: #fff;   
+                display: block;
+                height: 34px;
+                width: 100%;
+                line-height: 34px;;
+            }
+        }
+        li.cur{
+            background: linear-gradient(#ffa632,#ff9000);;
+        }
+        li.mtab{
+            border-right: solid 1px #c14d00;
+            border-left: solid 1px #c14d00;
+        }
+    }
+
+    .plist{
+        padding: 10px 0;
+        border-bottom: 1px solid @borderColor;
+    }
+
+    .product-point{
+        margin: 8px 10px;
+        font-size:12px;
+        color:#888;
+        line-height: 18px;
+    }
+    
+    .product-com-box{
+        background-color: #F2F2F2;     
+        .product-com-title{
+            border-top: 4px solid #7a7a7a;
+            margin-top: 4px;
+            p{
+                height: 34px;
+                line-height: 34px;
+                background-color: #dbdbdb;
+                text-align: center;
+                font-size: 14px;
+                border-top: 1px solid #fff;
+            }
+        }
+        .product-com-point{
+            .star5{
+                height: 18px;
+                width: 90px;
+                margin-left: -2px;
+                    img{
+                        float: left;
+                        height: 16px;
+                    }
+            }
+            ul{
+                margin: 0;
+            }
+            ul > li{
+                padding: 0 10px 5px 10px ;
+                border-bottom:1px solid #888;
+                margin-top: 10px;
+            }
+            ul > li:last-child{
+                border: none;
+            }
+            ul > li > p {
+                border-bottom: 1px solid transparent;
+                height: 18px;
+                margin-bottom: 0;
+                line-height: 18px;
+                color: #AF9999;
+                font-size: 12px;
+            }
+
+            a{  
+                font-size: 12px;
+                color: #AF9999;
+            }
+            .com-user{
+                text-indent: 2em;
+                padding: 10px 0;
+            }
+        }
+    }
+
+    .com-more{
+        padding: 10px 10px 30px 10px;
+        background-color: #F2F2F2;
+        a{
+            display: block;
+            height:   30px;
+            line-height: 30px;
+            border: 1px solid #D2D2D2;
+            border-radius: 4px;
+            background: linear-gradient(#f1f1f1,#d4d4d4);
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+}
+
+// app打开

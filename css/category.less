@@ -1,0 +1,63 @@
+@import url(common.less);
+
+.footer{
+    margin-top: 0;
+}
+
+.brief{
+    background-color: @bgcColor;
+    padding: 5px;
+    padding-bottom: 20px;;
+    .briefin{
+        background-color: #ebebeb;
+        border: 1px solid #ccc;
+        color: #666;
+        font-size: 14px;
+        border-radius: 4px;
+        .panel-group{
+            border: none;
+            margin: 0;
+            div{
+                margin: 0;
+                border: none;
+                padding: 0;
+
+            }
+            .panel-title{
+                 a{
+                    height: 40px;
+                    line-height: 40px;
+                    padding-left: 30px;
+                    font-size: 16px;
+                    font-weight: 700; 
+                    display: block;
+                    background: url(http://www.zuyushop.com/wap/images/arrow1.gif) right center no-repeat;
+                    border-bottom: 1px solid #ccc;
+                }
+                .collapsed{
+                    background: url("http://www.zuyushop.com/wap/images/arrow2.gif") right center no-repeat;
+                }
+            }
+
+            .panel-body{
+                li{
+                    float: left;
+                    width: 33.3333%;
+                    height: 40px;
+                    text-align: center;
+                    line-height: 40px;
+                    border-right: 1px solid #ccc;
+                    border-bottom: 1px solid #ccc;
+                    a{
+                        color: #333;
+                        display: block;
+                        width: 100%;
+                    }
+                }
+                li:nth-child( 3n ){
+                     border-right: none;
+                }
+            }
+        }
+    }
+}

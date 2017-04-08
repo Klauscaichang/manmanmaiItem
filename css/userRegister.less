@@ -1,0 +1,64 @@
+@import "common.less";
+// 修改公共样式
+
+.footer{
+    margin-top: 0;
+}
+
+.login_box{
+    background-color: @bgcColor;
+    padding: 15px 10px;
+    input{
+        background: linear-gradient(#f5f5f5,#fdfdfd);
+        background-color: #fff;
+        border:1px solid #aaa;
+    }
+    input:focus{
+        background: linear-gradient(#f5f5f5,#fdfdfd);
+        background-color: #fff;
+        border:1px solid #aaa;
+        box-shadow: none;
+    }
+    p{
+        margin: 0;
+        color: rgb(204, 51, 0);
+        >i{
+            color: green;
+        }
+    }
+    .login_btn{
+        width: 100%;
+        background-color: #ff9000;
+        font-size: 18px;
+        color: #fff;
+        border-radius: 10px;
+    }
+    .login_btn:focus{
+        width: 100%;
+        background-color: #ff9000;
+        font-size: 18px;
+        color: #fff;
+        border-radius: 10px;
+        outline: none;
+        border:1px solid transparent;
+    }
+
+    .receive_box{
+        height: 38px;
+        width: 100%;
+        margin-bottom: 15px;
+        *{
+            height: 100%;
+        }
+        .inPhone{
+            width: 100px;
+            padding-left: 5px;
+        }
+        .receive_btn{
+            width: 30%;
+            border: 1px solid #d4d4d4;
+            background:linear-gradient(#fff,#d4d4d4 );
+            border-radius: 5px;
+        }
+    }
+}

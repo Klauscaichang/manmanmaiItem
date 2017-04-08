@@ -1,0 +1,42 @@
+// 引用公共样式
+@import "common.less";
+
+
+
+// 覆盖公共样式
+.footer{
+    margin-top: 10px;
+}
+
+// 独立页面样式
+//  中间位置部分
+.site-nav{
+    padding:10px 50px;
+    .s-n-box{
+        width: 300px;
+        margin: 0 auto;
+        li{
+            float: left;
+            a{
+                background-color: @bgcColor;
+                display: block;
+                padding: 10px 8px;
+                font-size: 16px;
+                border: 1px solid #bfbfbf;
+                margin:0 0 5px 5px;
+            }   
+        }
+    }
+}
+
+// 当前页面位置
+.site-current{
+    padding-left: 30px;
+    background-color: @bgcColor;
+    background:linear-gradient(  #ffffff ,#ebebeb, ); 
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ccc;
+    a{
+        line-height: 40px;
+    }
+}
